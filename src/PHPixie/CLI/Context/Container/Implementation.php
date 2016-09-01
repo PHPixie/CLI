@@ -16,7 +16,7 @@ class Implementation implements \PHPixie\CLI\Context\Container
         return $this->cliContext;
     }
 
-    public function setCLIContext($cliContext)
+    public function setCliContext($cliContext)
     {
         return $this->cliContext = $cliContext;
     }
