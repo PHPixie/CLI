@@ -110,7 +110,7 @@ class SAPI implements \PHPixie\CLI\Context
                 continue;
             }
 
-            if(preg_match('#^--([a-z0-9]+)(?:=(.*))?$#i', $parameter, $matches)) {
+            if(preg_match('#^--([a-z0-9\-]+)(?:=(.*))?$#i', $parameter, $matches)) {
                 $option = $matches[1];
 
                 if(!empty($matches[2])) {
