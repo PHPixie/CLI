@@ -4,6 +4,10 @@ namespace PHPixie\CLI\Context;
 
 class SAPI implements \PHPixie\CLI\Context
 {
+    /**
+     *
+     * @var \PHPixie\CLI\Builder 
+     */
     protected $builder;
 
     protected $inputStream;
@@ -17,11 +21,19 @@ class SAPI implements \PHPixie\CLI\Context
     
     protected $exitCode;
 
+    /**
+     * 
+     * @param \PHPixie\CLI\Builder $builder
+     */
     public function __construct($builder)
     {
         $this->builder = $builder;
     }
 
+    /**
+     * 
+     * @return \PHPixie\CLI\Stream\Input
+     */
     public function inputStream()
     {
         if($this->inputStream === null) {
@@ -31,6 +43,10 @@ class SAPI implements \PHPixie\CLI\Context
         return $this->inputStream;
     }
 
+    /**
+     * 
+     * @return \PHPixie\CLI\Stream\Output
+     */
     public function outputStream()
     {
         if($this->outputStream === null) {
@@ -40,6 +56,10 @@ class SAPI implements \PHPixie\CLI\Context
         return $this->outputStream;
     }
 
+    /**
+     * 
+     * @return \PHPixie\CLI\Stream\Output
+     */
     public function errorStream()
     {
         if($this->errorStream === null) {

@@ -14,6 +14,10 @@ class CLI
         $this->builder = $this->buildBuilder($contextContainer);
     }
 
+    /**
+     * 
+     * @return \PHPixie\CLI\Context\SAPI
+     */
     public function context()
     {
         return $this->builder->context();
@@ -24,6 +28,11 @@ class CLI
         return $this->builder->buildSapiContext();
     }
 
+    /**
+     * 
+     * @param type $contextContainer
+     * @return \PHPixie\CLI\Builder
+     */
     protected function buildBuilder($contextContainer)
     {
         return new CLI\Builder($contextContainer);
