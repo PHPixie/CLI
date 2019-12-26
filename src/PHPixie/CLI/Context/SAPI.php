@@ -111,7 +111,7 @@ class SAPI implements \PHPixie\CLI\Context
         array_shift($parameters);
         foreach($parameters as $parameter) {
 
-            if($parameter{0} !== '-') {
+            if($parameter[0] !== '-') {
                 $arguments[]= $parameter;
                 continue;
             }
